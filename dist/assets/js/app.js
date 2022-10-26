@@ -50,6 +50,17 @@ $(function () {
 
 	});
 
+	$('.prod-slaider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: $('.prod__arrow-prev'),
+		nextArrow: $('.prod__arrow-next'),
+
+
+	});
+
 	// вызов меню
 	function menu(button, data) {
 		let btn = document.querySelectorAll(`${button}`);
