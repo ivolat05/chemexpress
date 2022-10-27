@@ -63,10 +63,14 @@ $(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
+		arrows: false
+
+	});
+	$('.allnews-slaider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
 		arrows: false,
-		init: () => {
-			console.log('df')
-		}
 
 	});
 
