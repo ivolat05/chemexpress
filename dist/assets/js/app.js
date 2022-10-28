@@ -66,13 +66,7 @@ $(function () {
 		arrows: false
 
 	});
-	$('.allnews-slaider').slick({
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		dots: false,
-		arrows: false,
 
-	});
 
 	$('.prod-slaider').slick({
 		slidesToShow: 6,
