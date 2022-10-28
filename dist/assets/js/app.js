@@ -226,4 +226,60 @@ $(function () {
 		}
 	}
 	rezetFilter()
+
+	// select
+	let select = function () {
+		let selectHeader = document.querySelectorAll('.select__header');
+		let selectItem = document.querySelectorAll('.select__item');
+		if (selectHeader) {
+			selectHeader.forEach((item) => {
+				item.addEventListener('click', selectToggle)
+			})
+
+			selectItem.forEach((item) => {
+				item.addEventListener('click', selectChoose)
+			})
+
+			function selectToggle(e) {
+				e.stopPropagation();
+				let selectList = document.querySelectorAll('.select');
+
+				selectList.forEach(item => {
+					item.classList.remove('is-active');
+				})
+				this.parentElement.classList.toggle('is-active');
+			}
+
+			function selectChoose(e) {
+				let text = this.innerText;
+				let select = this.closest('.select');
+				let currentText = select.querySelector(".select__current");
+				let currentBtn = select.querySelector(".select__header");
+				let dataArr = currentBtn.getAttribute('data-inp');
+				let idHideInput = document.getElementById(dataArr);
+				let textTwo = currentText.innerText;
+				e.stopPropagation();
+				currentText.innerText = text;
+				idHideInput.value = text;
+				this.innerText = textTwo;
+				select.classList.remove('is-active');
+			}
+
+
+		}
+		document.addEventListener('click', (event) => {
+			let selectList = document.querySelectorAll('.select');
+			if (selectList) {
+				if (event.target != "selectItem") {
+					selectList.forEach(item => {
+						item.classList.remove('is-active');
+					})
+
+				}
+
+			}
+		})
+
+	}
+	select();
 })
