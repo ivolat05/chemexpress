@@ -82,15 +82,46 @@ $(function () {
 	// вызов меню
 	function menu(button, data) {
 		let btn = document.querySelectorAll(`${button}`);
-		btn.forEach(item => {
-			item.addEventListener('click', () => {
-				let dataArr = item.getAttribute(`${data}`);
-				let id = document.getElementById(dataArr);
-				item.classList.toggle('--active');
-				id.classList.toggle('--active');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let dataArr = item.getAttribute(`${data}`);
+					let id = document.getElementById(dataArr);
+					item.classList.toggle('--active');
+					id.classList.toggle('--active');
+				})
 			})
-		})
+		}
 	}
 
 	menu('.header-catalog-btn', 'data-menu')
+
+	// анимация круга и footer
+	// startBlock блок начала анимации
+	// blockAnim анимируемый блок
+	function animateCircleFooter(startBlock, blockAnim) {
+		// Получить заголовок
+		let start = document.getElementById(`${startBlock}`);
+		let anim = document.getElementById(`${blockAnim}`);
+		if (start || anim) {
+
+			// Получить смещение позиции навигационной панели
+			let startPos = start.offsetTop;
+			// Добавить класс "sticky" к заголовку, когда вы достигнете его позиции прокрутке.
+			// Удалить "sticky" при выходе из положения прокрутки
+			window.addEventListener('scroll', () => {
+
+				if (window.pageYOffset > startPos) {
+					anim.classList.add("--anim");
+
+				} else {
+					anim.classList.remove("--anim");
+				}
+			})
+
+		}
+	}
+	animateCircleFooter('start-circle', 'circle-1');
+	animateCircleFooter('start-line', 'footer-line');
+	animateCircleFooter('start-line', 'allnews-line')
 })
