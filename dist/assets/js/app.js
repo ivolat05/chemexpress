@@ -100,6 +100,8 @@ $(function () {
 	// анимация круга и footer
 	// startBlock блок начала анимации
 	// blockAnim анимируемый блок
+	// для старта анимации id="start-line" должен распологаться на последним или предпоследним
+	// <div   class="category-box"> на страниец сategories.html
 	function animateCircleFooter(startBlock, blockAnim) {
 		// Получить заголовок
 		let start = document.getElementById(`${startBlock}`);
