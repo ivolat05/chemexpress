@@ -100,8 +100,7 @@ $(function () {
 	// анимация круга и footer
 	// startBlock блок начала анимации
 	// blockAnim анимируемый блок
-	// для старта анимации id="start-line" должен распологаться на последним или предпоследним
-	// <div   class="category-box"> на страниец сategories.html
+
 	function animateCircleFooter(startBlock, blockAnim) {
 		// Получить заголовок
 		let start = document.getElementById(`${startBlock}`);
@@ -109,12 +108,15 @@ $(function () {
 		if (start && anim) {
 
 			// Получить смещение позиции навигационной панели
-			let startPos = start.offsetTop;
+
+
 			// Добавить класс "sticky" к заголовку, когда вы достигнете его позиции прокрутке.
 			// Удалить "sticky" при выходе из положения прокрутки
 			window.addEventListener('scroll', () => {
+				let startPos = start.offsetTop;
 
-				if (window.pageYOffset > startPos) {
+
+				if (window.pageYOffset + window.screen.availHeight / 2 > startPos) {
 					anim.classList.add("--anim");
 
 				} else {
