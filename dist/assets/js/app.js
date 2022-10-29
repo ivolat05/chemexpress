@@ -80,6 +80,18 @@ $(function () {
 
 	});
 
+
+	$('.pages-slaider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: $('.pages__arrow-prev'),
+		nextArrow: $('.pages__arrow-next'),
+
+
+	});
+
 	// вызов меню
 	function menu(button, data) {
 		let btn = document.querySelectorAll(`${button}`);
