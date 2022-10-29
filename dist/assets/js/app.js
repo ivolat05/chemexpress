@@ -284,4 +284,84 @@ $(function () {
 
 	}
 	select();
+
+	// коризина колличество товара
+	function basketProduct() {
+		let btnPrev = document.querySelectorAll('.basket-coll-prev');
+		let btnNext = document.querySelectorAll('.basket-coll-next');
+		let basketNum = document.querySelectorAll('.basket-num');
+		if (btnPrev && btnNext && basketNum) {
+			btnPrev.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					idInput.value -= 1;
+					if (idInput.value > 0) {
+						if (item.classList.contains('--disabled')) {
+							item.classList.remove('--disabled')
+						}
+					} else if (idInput.value <= 1) {
+						item.classList.add('--disabled')
+						idInput.value = 1;
+					}
+				})
+			})
+			btnNext.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					let num = +idInput.value;
+
+					idInput.value = num + 1;
+					if (idInput.value > 1) {
+						btnPrev.forEach(item => {
+							if (item.getAttribute('data-basket') == tabId) {
+
+								if (item.classList.contains('--disabled')) {
+									item.classList.remove('--disabled')
+								}
+							}
+						})
+					}
+
+				})
+			})
+			basketNum.forEach((item) => {
+				item.addEventListener('keyup', () => {
+					console.log(item.value)
+					if (item.value < 0) {
+						item.value = 1;
+					}
+				})
+			})
+
+		}
+	}
+	basketProduct();
+
+	// tab
+	// button кнопка переключения
+	// tabs закладки
+	// dataAtr дата атрибут
+	function tab(button, tabs, dataAtr) {
+		const btn = document.querySelectorAll(`${button}`);
+		const tab = document.querySelectorAll(`${tabs}`);
+		if (btn && tab && dataAtr) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let btnArr = item.getAttribute(`${dataAtr}`);
+					let id = document.getElementById(btnArr);
+					btn.forEach(event => {
+						event.classList.remove('--active');
+					})
+					tab.forEach(e => {
+						e.classList.remove('--active');
+					})
+					item.classList.add('--active');
+					id.classList.add('--active');
+				})
+			})
+		}
+	}
+	tab('.card-tab-btn', '.card-tab-box', 'data-tab');
 })
