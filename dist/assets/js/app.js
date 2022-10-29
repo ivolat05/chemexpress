@@ -106,7 +106,7 @@ $(function () {
 		// Получить заголовок
 		let start = document.getElementById(`${startBlock}`);
 		let anim = document.getElementById(`${blockAnim}`);
-		if (start || anim) {
+		if (start && anim) {
 
 			// Получить смещение позиции навигационной панели
 			let startPos = start.offsetTop;
