@@ -41,7 +41,20 @@ $(function () {
 
 	$('.open-modal, .open-modal-2').magnificPopup({
 		type: 'inline',
+		showCloseBtn: false,
 		mainClass: 'mfp-fade'
+	});
+
+	$('.gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-img',
+		tLoading: 'Загрузка изоброжения',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
 	});
 
 	//popup close
@@ -76,6 +89,17 @@ $(function () {
 		arrows: true,
 		prevArrow: $('.prod__arrow-prev'),
 		nextArrow: $('.prod__arrow-next'),
+
+
+	});
+
+	$('.license-slaider').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		prevArrow: $('.license__arrow-prev'),
+		nextArrow: $('.license__arrow-next'),
 
 
 	});
