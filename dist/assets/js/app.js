@@ -402,4 +402,28 @@ $(function () {
 		}
 	}
 	tab('.card-tab-btn', '.card-tab-box', 'data-tab');
+
+	// копирование в буфер
+	function copyBuffer(button, attribute) {
+		const btn = document.querySelectorAll(`${button}`);
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let dataArr = item.getAttribute(`${attribute}`)
+					let id = document.getElementById(dataArr).innerText;
+					const boxCopy = document.createElement('textarea');
+					boxCopy.value = id;
+					boxCopy.setAttribute('readonly', '');
+					boxCopy.style.position = 'absolute';
+					boxCopy.style.left = '-9999px';
+					document.body.appendChild(boxCopy);
+					boxCopy.select();
+					document.execCommand('copy');
+					document.body.removeChild(boxCopy);
+
+				})
+			})
+		}
+	}
+	copyBuffer('.requisites-btn', 'data-copy')
 })
