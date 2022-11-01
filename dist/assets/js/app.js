@@ -284,7 +284,7 @@ $(function () {
 		}
 	}
 	accordion('.catalog-accordion-btn');
-
+	accordion('.category-mob-btn');
 	// фильтр ползунок
 	// ползунок выбора цен
 	// idLine id div ползунка
@@ -345,7 +345,19 @@ $(function () {
 	function rezetFilter() {
 		const btn = document.querySelectorAll('.btn-reset');
 		const catalogLabelInput = document.querySelectorAll('.catalog-label-input');
+
 		if (btn || catalogLabelInput) {
+			let filterNum = document.querySelector('.filter-num');
+			let count = 0;
+			if (filterNum) {
+				catalogLabelInput.forEach(e => {
+					if (e.checked) {
+						count += 1;
+					}
+				})
+				filterNum.innerHTML = count;
+				count = 0
+			}
 			btn.forEach(item => {
 				item.addEventListener('click', () => {
 					catalogLabelInput.forEach(event => {
@@ -353,12 +365,42 @@ $(function () {
 							event.checked = false;
 						}
 					})
+					count = 0
+					if (filterNum) {
+						catalogLabelInput.forEach(e => {
+							if (e.checked) {
+								count += 1;
+							}
+						})
+						filterNum.innerHTML = count;
+						count = 0
+					}
 				})
 			})
 		}
 	}
 	rezetFilter()
 
+	// показ счетчик
+	function filterNum() {
+		const catalogLabelInput = document.querySelectorAll('.catalog-label-input');
+		let filterNum = document.querySelector('.filter-num');
+		let count = 0;
+		if (catalogLabelInput && filterNum) {
+			catalogLabelInput.forEach(item => {
+				item.addEventListener('click', () => {
+					catalogLabelInput.forEach(e => {
+						if (e.checked) {
+							count += 1;
+						}
+					})
+					filterNum.innerHTML = count;
+					count = 0
+				})
+			})
+		}
+	}
+	filterNum()
 	// select
 	let select = function () {
 		let selectHeader = document.querySelectorAll('.select__header');
@@ -518,4 +560,39 @@ $(function () {
 		}
 	}
 	copyBuffer('.requisites-btn', 'data-copy')
+
+	// открытие мобильной версии фильтра
+	function filterMob() {
+		let btn = document.querySelectorAll('.filter-mob-btn');
+		let catalogMenuFon = document.querySelector('.catalog-menu-fon');
+		if (btn && catalogMenuFon) {
+			const mobClose = document.querySelector('.catalob-menu-mob-close');
+			const filterBtn = document.querySelector('.filter-btn');
+			let body = document.querySelector('body')
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					catalogMenuFon.classList.add('--active');
+					body.classList.add('--stop');
+				})
+			})
+			mobClose.addEventListener('click', () => {
+				catalogMenuFon.classList.remove('--active');
+				body.classList.remove('--stop');
+			})
+			filterBtn.addEventListener('click', () => {
+				catalogMenuFon.classList.remove('--active');
+				body.classList.remove('--stop');
+			})
+			window.addEventListener("resize", function () {
+				if (window.innerWidth >= 992) {
+					if (catalogMenuFon.classList.contains('--active')) {
+						body.classList.remove('--stop');
+						catalogMenuFon.classList.remove('--active');
+					}
+				}
+			});
+
+		}
+	}
+	filterMob()
 })
