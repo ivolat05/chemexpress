@@ -81,6 +81,14 @@
 								</a>
 							</li>
 						</ul>
+						<div class="header-coll-mob">
+							<div class="header-coll-row">
+								режим работы
+							</div>
+							<div class="header-coll-row-2">
+								пн-пт: 08:30-17:00
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -91,7 +99,7 @@
 							<img src="./assets/img/header/logo1.png" alt="" class="logo-img">
 						</a>
 						<div class="header-search-box">
-							<button class="header-catalog-btn" data-menu="menu">
+							<button class="header-catalog-btn header-catalog-btn-desc" data-menu="menu">
 								<img src="./assets/img/header/colb.png" alt="" class="header-catalog-img">
 								<img src="./assets/img/header/close.svg" alt="" class="header-catalog-img-close">
 		
@@ -111,200 +119,280 @@
 									пн-пт: 08:30-17:00
 								</div>
 							</div>
-							<div class="header-tell-box">
-								<button class="header-tell-btn">
-									8 (846) 268-99-27
-									<img src="./assets/img/header/arrow.svg" alt="" class="header-tell-img">
-								</button>
+							<div class="header-tell-box select">
+								<button class="header-tell-btn select__header" data-inp="catalog-select-1">
+									<span class="select__current header-tell-btn">
+										8 (846) 268-99-27
+									</span>
 		
+									<img src="./assets/img/header/arrow.svg" alt="" class="select-img header-tell-img">
+								</button>
+								<div class="select__body header-tell-select-body">
+									<a href="tel:88462689903" class="select__item header-tell-btn">
+										8 (846) 268-99-03
+									</a>
+									<a href="tel:88462689900" class="select__item header-tell-btn">
+										8 (846) 268-99-00
+									</a>
+								</div>
+								<input id="catalog-select-1" type="hidden" value="по цене" class="select-input-hide">
 							</div>
 						</div>
-						<a href="#" class="header-basket">
-							<span class="header-basket-num">
-								3
-							</span>
-							<svg class="header-basket-svg" xmlns="http://www.w3.org/2000/svg" height="48" fill="#00a851"
-								width="48">
-								<path
-									d="M14.35 44.25q-1.5 0-2.55-1.05-1.05-1.05-1.05-2.55 0-1.5 1.05-2.55 1.05-1.05 2.55-1.05 1.5 0 2.55 1.075 1.05 1.075 1.05 2.525 0 1.5-1.05 2.55-1.05 1.05-2.55 1.05Zm20 0q-1.5 0-2.55-1.05-1.05-1.05-1.05-2.55 0-1.5 1.05-2.55 1.05-1.05 2.55-1.05 1.5 0 2.55 1.075 1.05 1.075 1.05 2.525 0 1.5-1.05 2.55-1.05 1.05-2.55 1.05Zm-22.05-33 5 10.45h14.3l5.7-10.45Zm-1.85-3.6H39.1q1.5 0 2.3 1.35.8 1.35 0 2.75L35.15 23.1q-.6 1-1.525 1.625-.925.625-2.125.625H16.55l-2.6 4.9h24.3v3.6h-24.4q-2.35 0-3.35-1.575t.05-3.425l3.15-5.75L6.25 7.3h-4V3.7H8.6ZM17.3 21.7h14.3Z" />
-							</svg>
-						</a>
+						<div class="header-mob-coll">
+							<a href="#" class="header-basket">
+								<span class="header-basket-num">
+									3
+								</span>
+								<svg class="header-basket-svg" xmlns="http://www.w3.org/2000/svg" height="48" fill="#00a851"
+									width="48">
+									<path
+										d="M14.35 44.25q-1.5 0-2.55-1.05-1.05-1.05-1.05-2.55 0-1.5 1.05-2.55 1.05-1.05 2.55-1.05 1.5 0 2.55 1.075 1.05 1.075 1.05 2.525 0 1.5-1.05 2.55-1.05 1.05-2.55 1.05Zm20 0q-1.5 0-2.55-1.05-1.05-1.05-1.05-2.55 0-1.5 1.05-2.55 1.05-1.05 2.55-1.05 1.5 0 2.55 1.075 1.05 1.075 1.05 2.525 0 1.5-1.05 2.55-1.05 1.05-2.55 1.05Zm-22.05-33 5 10.45h14.3l5.7-10.45Zm-1.85-3.6H39.1q1.5 0 2.3 1.35.8 1.35 0 2.75L35.15 23.1q-.6 1-1.525 1.625-.925.625-2.125.625H16.55l-2.6 4.9h24.3v3.6h-24.4q-2.35 0-3.35-1.575t.05-3.425l3.15-5.75L6.25 7.3h-4V3.7H8.6ZM17.3 21.7h14.3Z" />
+								</svg>
+							</a>
+							<button class="header-catalog-btn header-catalog-btn-mob" data-menu="menu">
+								<svg class="header-catalog-img" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="14" viewBox="0 0 20 14">
+									<image id="menu_FILL0_wght600_GRAD0_opsz48" width="20" height="14"
+										xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAABHNCSVQICAgIfAhkiAAAAFBJREFUOE9j/P//vwwDA0MIEFMDbGYEGugANGk/NUwDmhEIMlADyKigkoGTQAZSySyIMUPDQKpHCtUNZAGGJQ+VYubr0IgUqidsqkcKVQsHAO6fNNRzzKj9AAAAAElFTkSuQmCC" />
+								</svg>
+		
+								<img src="./assets/img/header/close.svg" alt="" class="header-catalog-img-close">
+		
+							</button>
+						</div>
 					</div>
 					<div id="menu" class="menu">
-						<div class="menu-coll">
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Химические реактивы
+						<div class="menu-container">
+							<h3 class="menu-wrapp-box --active" data-wrap="wrapp-1">
+								Каталог товаров
+								<img src="./assets/img/header/wrapp-active.png" alt="" class="menu-header-wrapp-img">
+							</h3>
+							<div id="wrapp-1" class="menu-wrapper --active">
+								<div class="menu-coll">
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-1">
+												Химические реактивы
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-1" class="menu-body">
+											<a href="#" class="menu-link">
+												Азотистая кислота
+											</a>
+											<a href="#" class="menu-link">
+												Борная кислота
+											</a>
+											<a href="#" class="menu-link">
+												Кислота ОЭДФ
+											</a>
+											<a href="#" class="menu-link">
+												Ледяная уксусная кислота
+											</a>
+											<a href="#" class="menu-link">
+												Молочная кислота
+											</a>
+										</div>
+									</div>
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-3.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-2">
+												Бытовая химия
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-2" class="menu-body">
+											<a href="#" class="menu-link">
+												Порошки
+											</a>
+											<a href="#" class="menu-link">
+												Моющие средства
+											</a>
+											<a href="#" class="menu-link">
+												Перчатки и пакеты
+											</a>
+											<a href="#" class="menu-link">
+												Кислоты
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Азотистая кислота
-									</a>
-									<a href="#" class="menu-link">
-										Борная кислота
-									</a>
-									<a href="#" class="menu-link">
-										Кислота ОЭДФ
-									</a>
-									<a href="#" class="menu-link">
-										Ледяная уксусная кислота
-									</a>
-									<a href="#" class="menu-link">
-										Молочная кислота
-									</a>
-								</div>
-							</div>
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-3.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Бытовая химия
-									</div>
-								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Порошки
-									</a>
-									<a href="#" class="menu-link">
-										Моющие средства
-									</a>
-									<a href="#" class="menu-link">
-										Перчатки и пакеты
-									</a>
-									<a href="#" class="menu-link">
-										Кислоты
-									</a>
-								</div>
-							</div>
-						</div>
 					
-						<div class="menu-coll">
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-2.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Техническая химия
+								<div class="menu-coll">
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-2.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-3">
+												Техническая химия
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-3" class="menu-body">
+											<a href="#" class="menu-link">
+												Название
+											</a>
+											<a href="#" class="menu-link">
+												Химия какая-то
+											</a>
+											<a href="#" class="menu-link">
+												Какой-то подразде
+											</a>
+										</div>
+									</div>
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-4">
+												Удобрения
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-4" class="menu-body">
+											<a href="#" class="menu-link">
+												Азотистая кислота
+											</a>
+											<a href="#" class="menu-link">
+												Борная кислота
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Название
-									</a>
-									<a href="#" class="menu-link">
-										Химия какая-то
-									</a>
-									<a href="#" class="menu-link">
-										Какой-то подразде
-									</a>
-								</div>
-							</div>
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Удобрения
-									</div>
-								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Азотистая кислота
-									</a>
-									<a href="#" class="menu-link">
-										Борная кислота
-									</a>
-								</div>
-							</div>
-						</div>
 					
-						<div class="menu-coll">
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-3.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Бытовая химия
+								<div class="menu-coll">
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-3.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-5">
+												Бытовая химия
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-5" class="menu-body">
+											<a href="#" class="menu-link">
+												Порошки
+											</a>
+											<a href="#" class="menu-link">
+												Моющие средства
+											</a>
+											<a href="#" class="menu-link">
+												Перчатки и пакеты
+											</a>
+											<a href="#" class="menu-link">
+												Кислоты
+											</a>
+										</div>
+									</div>
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-6">
+												Химические реактивы
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-6" class="menu-body">
+											<a href="#" class="menu-link">
+												Азотистая кислота
+											</a>
+											<a href="#" class="menu-link">
+												Борная кислота
+											</a>
+											<a href="#" class="menu-link">
+												Кислота ОЭДФ
+											</a>
+											<a href="#" class="menu-link">
+												Ледяная уксусная кислота
+											</a>
+											<a href="#" class="menu-link">
+												Молочная кислота
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Порошки
-									</a>
-									<a href="#" class="menu-link">
-										Моющие средства
-									</a>
-									<a href="#" class="menu-link">
-										Перчатки и пакеты
-									</a>
-									<a href="#" class="menu-link">
-										Кислоты
-									</a>
-								</div>
-							</div>
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Химические реактивы
-									</div>
-								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Азотистая кислота
-									</a>
-									<a href="#" class="menu-link">
-										Борная кислота
-									</a>
-									<a href="#" class="menu-link">
-										Кислота ОЭДФ
-									</a>
-									<a href="#" class="menu-link">
-										Ледяная уксусная кислота
-									</a>
-									<a href="#" class="menu-link">
-										Молочная кислота
-									</a>
-								</div>
-							</div>
-						</div>
 					
-						<div class="menu-coll">
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Удобрения
+								<div class="menu-coll">
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-1.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-7">
+												Удобрения
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div id="mob-7" class="menu-body">
+											<a href="#" class="menu-link">
+												Азотистая кислота
+											</a>
+											<a href="#" class="menu-link">
+												Борная кислота
+											</a>
+										</div>
+									</div>
+									<div class="menu-box">
+										<div class="menu-header">
+											<img src="./assets/img/header/menu-2.png" alt="" class="menu-header-img">
+											<div class="menu-header-title" data-mob="mob-1">
+												Техническая химия
+												<img src="./assets/img/header/menu-noactive.png" alt="" class="menu-header-mob-img">
+												<img src="./assets/img/header/menu-active.png" alt="" class="menu-header-mob-img--active">
+											</div>
+										</div>
+										<div class="menu-body">
+											<a href="#" class="menu-link">
+												Название
+											</a>
+											<a href="#" class="menu-link">
+												Химия какая-то
+											</a>
+											<a href="#" class="menu-link">
+												Какой-то подразде
+											</a>
+										</div>
 									</div>
 								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Азотистая кислота
-									</a>
-									<a href="#" class="menu-link">
-										Борная кислота
-									</a>
-								</div>
 							</div>
-							<div class="menu-box">
-								<div class="menu-header">
-									<img src="./assets/img/header/menu-2.png" alt="" class="menu-header-img">
-									<div class="menu-header-title">
-										Техническая химия
-									</div>
-								</div>
-								<div class="menu-body">
-									<a href="#" class="menu-link">
-										Название
+							<ul class="menu-mob">
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										<img src="./assets/img/header/menu-mob-link.png" alt="" class="menu-mob-link-img">
+										Акции и скидки
 									</a>
-									<a href="#" class="menu-link">
-										Химия какая-то
+								</li>
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										О компании
 									</a>
-									<a href="#" class="menu-link">
-										Какой-то подразде
+								</li>
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										Доставка и оплата
 									</a>
-								</div>
-							</div>
+								</li>
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										Документы и сертификаты
+									</a>
+								</li>
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										Новости
+									</a>
+								</li>
+								<li class="menu-mob-list">
+									<a href="#" class="menu-mob-link">
+										Контакты
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -761,18 +849,20 @@
 						<a href="#" class="footer-logo">
 							<img src="./assets/img/footer/logo2.png" alt="" class="footer-img">
 						</a>
-						<div class="footer-adress">
-							443022, Россия, город
-							Самара, проспект Кирова,
-							дом 6
-						</div>
-						<div class="footer-row">
-							<a href="tel:88463794100" class="footer-row-link">
-								8 (846) 379-41-00
-							</a>
-							<a href="tel:88469926124" class="footer-row-link">8 (846) 992-61-24</a>
-							<a href="tel:88469551158" class="footer-row-link">8 (846) 955-11-58</a>
-							<a href="tel:88469320590" class="footer-row-link">8 (846) 932-05-90</a>
+						<div class="footer-wrapp-box">
+							<div class="footer-adress">
+								443022, Россия, город
+								Самара, проспект Кирова,
+								дом 6
+							</div>
+							<div class="footer-row">
+								<a href="tel:88463794100" class="footer-row-link">
+									8 (846) 379-41-00
+								</a>
+								<a href="tel:88469926124" class="footer-row-link">8 (846) 992-61-24</a>
+								<a href="tel:88469551158" class="footer-row-link">8 (846) 955-11-58</a>
+								<a href="tel:88469320590" class="footer-row-link">8 (846) 932-05-90</a>
+							</div>
 						</div>
 					</div>
 					<div class="footer-wrapp-coll-2">
