@@ -188,7 +188,61 @@ $(function () {
 		prevArrow: $('.license__arrow-prev'),
 		nextArrow: $('.license__arrow-next'),
 
+		responsive: [
+			{
+				breakpoint: 1610,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			},
 
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 762,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			}
+			,
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			}
+			,
+			{
+				breakpoint: 430,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			}
+
+		]
 	});
 
 
